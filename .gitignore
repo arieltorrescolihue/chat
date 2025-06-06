@@ -1,0 +1,83 @@
+# --------------------------------------------
+# Dependencias y compilados de Node/TypeScript
+# --------------------------------------------
+# Ignora node_modules donde sea que estén
+**/node_modules/
+
+# Salidas de compilación (JavaScript generado)
+dist/
+build/
+out/
+*.js
+*.js.map
+# Información de compilación incremental de TypeScript
+*.tsbuildinfo
+
+# --------------------------------------------
+# Configuraciones locales y editoriales
+# --------------------------------------------
+# Carpetas de IDEs comunes
+.vscode/
+.idea/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# --------------------------------------------
+# Variables de entorno y credenciales
+# --------------------------------------------
+.env
+.env.*.local
+
+# Credenciales de WhatsApp-web.js (no subas tu sesión)
+.wwebjs_auth/
+.wwebjs_cache/
+
+# --------------------------------------------
+# Bases de datos y caches locales
+# --------------------------------------------
+# Chroma almacena su DB local aquí; pesa un huevo
+chroma_db/
+chroma.sqlite3
+
+# Entornos virtuales (aunque no es Node, igual lo tenés en la raíz)
+chroma-venv/
+
+# Cualquier carpeta de cache que uses para datasets intermedios
+# (por si no querés subir tus CSVs en crudo)
+datasets/
+# Ojo: si "datasets" es parte del código que debe compartirse,
+# déjalo fuera. Solo ignora si son datos grandes o privados.
+
+# Ingestas temporales u otros caches
+ingest/node_modules/
+
+# --------------------------------------------
+# Logs, reportes y coverage
+# --------------------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Si usas Jest u otro framework de tests:
+coverage/
+
+# --------------------------------------------
+# Archivos de lock (opcional)
+# --------------------------------------------
+# Puedes ignorar el lockfile si prefieres, pero generalmente
+# conviene versionarlo. Si querés ignorarlo:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# --------------------------------------------
+# Extras al pedo (Docker, empaquetados, etc.)
+# --------------------------------------------
+# Dockerfile*        # solo si tenés Dockerfiles y no querés subirlos
+# docker-compose*.yml
+
+# Paquetes .tgz generados
+*.tgz
